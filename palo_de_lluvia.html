@@ -329,20 +329,6 @@
     .empty-state strong { display: block; margin-bottom: 8px; color: var(--yellow); font: 400 1.55rem/1.12 var(--display); text-transform: uppercase; }
     .load-error { border-color: var(--pink); color: var(--paper); }
 
-    .stories { background: var(--paper); color: var(--ink); }
-    .stories .eyebrow { color: var(--purple); }
-    .stories .eyebrow::before { background: var(--pink); box-shadow: none; }
-    .stories .section-heading p { color: #51495f; }
-    .story-card { border-color: rgba(38,2,115,.18); color: var(--ink); background: #fff; }
-    .story-image { aspect-ratio: 1.55; overflow: hidden; background: linear-gradient(135deg, var(--pink), var(--yellow)); }
-    .story-image img { width: 100%; height: 100%; object-fit: cover; }
-    .story-body { padding: 19px; }
-    .story-card h3 { color: var(--violet); }
-    .story-card p { color: #51495f; font-size: .88rem; }
-    .story-date { color: #665a79; font: 700 .64rem var(--mono); text-transform: uppercase; }
-    .story-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; color: var(--purple); font: 700 .68rem var(--mono); text-decoration-thickness: 1px; text-underline-offset: 4px; text-transform: uppercase; }
-    .story-placeholder { display: grid; min-height: 180px; place-items: center; color: rgba(24,11,57,.72); font: 400 3rem/1.1 var(--display); text-transform: uppercase; }
-
     .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .gallery-card { overflow: hidden; border: 1px solid var(--line); background: rgba(17,13,29,.68); }
     .gallery-visual { position: relative; aspect-ratio: 1; overflow: hidden; background: linear-gradient(145deg, var(--violet), var(--pink), var(--orange)); }
@@ -352,25 +338,6 @@
     .instagram-embed { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #080808; }
     .instagram-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
     .instagram-open-link { display: inline-flex; margin-top: 10px; color: var(--yellow); font: 700 .68rem var(--mono); text-decoration-thickness: 1px; text-underline-offset: 4px; text-transform: uppercase; }
-
-    .team-section { background: linear-gradient(180deg, rgba(80,5,242,.19), transparent); }
-    .team-card { padding: 22px; }
-    .team-avatar {
-      display: grid;
-      width: 66px;
-      height: 66px;
-      place-items: center;
-      overflow: hidden;
-      border: 1px solid rgba(242,200,73,.6);
-      border-radius: 50%;
-      color: var(--yellow);
-      background: linear-gradient(135deg, var(--purple), var(--pink));
-      font: 400 1.45rem var(--display);
-    }
-    .team-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .team-card h3 { margin-top: 18px; }
-    .team-role { margin: 0; color: var(--yellow); font: 700 .67rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-    .team-card > p:last-child { color: var(--muted); font-size: .87rem; }
 
     .contact-panel {
       display: grid;
@@ -478,7 +445,7 @@
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
       </button>
       <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
-        <a href="#proyecto">Proyecto</a><a href="#musica">Música</a><a href="#historias">Noticias</a><a href="#reels">Videos</a><a href="#galeria">Galería</a><a href="#equipo">Equipo</a><a href="#contacto">Contacto</a>
+        <a href="#proyecto">Proyecto</a><a href="#musica">Música</a><a href="#reels">Videos</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -535,19 +502,6 @@
         </div>
       </div>
     </section>
-    
-    <section class="section stories" id="historias">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><span class="eyebrow">Lado B · En contexto</span><h2>Historias que <span class="accent">suenan.</span></h2></div>
-          <p>Lanzamientos, entrevistas, reseñas y otras formas de encontrarnos con la música.</p>
-        </div>
-        <div class="story-grid" id="storyGrid" aria-live="polite">
-          <div class="empty-state"><strong>La conversación está por empezar.</strong>En este espacio compartiremos noticias, entrevistas, reseñas y novedades del proyecto.</div>
-        </div>
-        <p class="load-error" id="storiesError" hidden role="alert">No se pudieron cargar las noticias. Vuelve a intentarlo más tarde.</p>
-      </div>
-    </section>
 
     <section class="section" id="galeria">
       <div class="wrap">
@@ -562,19 +516,6 @@
       </div>
     </section>
 
-    <section class="section team-section" id="equipo">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><span class="eyebrow">Detrás de la señal</span><h2>Personas, ideas <span class="accent">y ruido.</span></h2></div>
-          <p>Un espacio para presentar a quienes hacen posible esta iniciativa.</p>
-        </div>
-        <div class="team-grid" id="teamGrid" aria-live="polite">
-          <div class="empty-state"><strong>El equipo se está presentando.</strong>Aquí pronto conocerás a las personas detrás de Palo de Lluvia.</div>
-        </div>
-        <p class="load-error" id="teamError" hidden role="alert">No se pudo cargar la información del equipo. Vuelve a intentarlo más tarde.</p>
-      </div>
-    </section>
-
     <section class="section" id="contacto">
       <div class="wrap">
         <div class="contact-panel">
@@ -584,9 +525,9 @@
             <p>Artistas, proyectos y personas curiosas: queremos conocerles.</p>
             <p style="margin-top:19px"><a class="contact-email" id="contactEmail" href="mailto:contacto.palodelluvia@gmail.com">contacto.palodelluvia@gmail.com</a></p>
             <div class="social-list" id="socialLinks" aria-label="Redes sociales">
-              <span class="social-link is-pending" aria-label="Instagram, @palo_de_lluvia"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.8" r="1.1"/></svg>@palo_de_lluvia</span>
-              <span class="social-link is-pending" aria-label="TikTok, @palo_de_lluvia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h3c.2 2 1.5 3.6 3.5 4.1v3.1A9 9 0 0 1 18 8.9v7a6.3 6.3 0 1 1-6.3-6.3c.5 0 .9 0 1.3.1v3.3a3.1 3.1 0 1 0 1.9 2.9V3Z"/></svg>@palo_de_lluvia</span>
-              <span class="social-link is-pending" aria-label="YouTube, @palo_de_lluvia"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7a3 3 0 0 0-2-2.1C19.2 4.4 12 4.4 12 4.4s-7.2 0-9 .5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5A3 3 0 0 0 3 19.1c1.8.5 9 .5 9 .5s7.2 0 9-.5a3 3 0 0 0 2-2.1 31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM10 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>@palo_de_lluvia</span>
+              <span class="social-link is-pending" aria-label="Instagram, @palo_de_lluvia">@palo_de_lluvia</span>
+              <span class="social-link is-pending" aria-label="TikTok, @palo_de_lluvia">@palo_de_lluvia</span>
+              <span class="social-link is-pending" aria-label="YouTube, @palo_de_lluvia">@palo_de_lluvia</span>
             </div>
           </div>
           <svg class="contact-art" viewBox="0 0 140 140" aria-hidden="true"><path d="M70 5v25M70 110v25M5 70h25M110 70h25M24 24l18 18m56 56 18 18m0-92-18 18m-56 56-18 18" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="70" cy="70" r="42" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="70" cy="70" r="25" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="70" cy="70" r="7" fill="currentColor"/></svg>
@@ -636,31 +577,10 @@
         if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
         return response.json();
       };
-      const setError = (id, error) => {
-        console.error(`Palo de Lluvia: no se pudo cargar ${id}.`, error);
-        const node = document.getElementById(id);
-        if (node) node.hidden = false;
-      };
       const setSiteStatus = (message) => {
         const status = $("#siteStatus");
         status.textContent = message;
         status.hidden = false;
-      };
-      const youtubeId = (value) => {
-        const raw = safeHttpUrl(value);
-        if (!raw) return "";
-        try {
-          const url = new URL(raw);
-          const host = url.hostname.replace(/^www\./, "").toLowerCase();
-          let id = "";
-          if (host === "youtu.be") id = url.pathname.split("/").filter(Boolean)[0] || "";
-          else if (["youtube.com", "m.youtube.com", "music.youtube.com", "youtube-nocookie.com"].includes(host)) {
-            id = url.searchParams.get("v") || url.pathname.match(/^\/(?:embed|shorts|live)\/([^/?]+)/)?.[1] || "";
-          }
-          return /^[A-Za-z0-9_-]{11}$/.test(id) ? id : "";
-        } catch {
-          return "";
-        }
       };
       const validInstagramUrl = (value) => {
         const raw = safeHttpUrl(value);
@@ -673,16 +593,11 @@
           return "";
         }
       };
-      const formatDate = (value) => {
-        if (!value) return "";
-        const date = new Date(`${value}T00:00:00`);
-        return Number.isNaN(date.getTime()) ? "" : new Intl.DateTimeFormat("es-CO", { year: "numeric", month: "long", day: "numeric" }).format(date);
-      };
       const iconMarkup = (name) => {
         const icons = {
           instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.8" r="1.1"/></svg>',
           tiktok: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h3c.2 2 1.5 3.6 3.5 4.1v3.1A9 9 0 0 1 18 8.9v7a6.3 6.3 0 1 1-6.3-6.3c.5 0 .9 0 1.3.1v3.3a3.1 3.1 0 1 0 1.9 2.9V3Z"/></svg>',
-          youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7a3 3 0 0 0-2-2.1C19.2 4.4 12 4.4 12 4.4s-7.2 0-9 .5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5A3 3 0 0 0 3 19.1c1.8.5 9 .5 9 .5s7.2 0 9-.5a3 3 0 0 0 2-2.1 31 31 0 0 0 .5-5 31 31 0 0 0-.5-5ZM10 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>'
+          youtube: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7a3 3 0 0 0-2-2.1C19.2 4.4 12 4.4 12 4.4s-7.2 0-9 .5A3 3 0 0 0 1 7a31 31 0 0 0-.5 5 31 31 0 0 0 .5 5A3 3 0 0 0 3 19.1c1.8.5 9 .5 9 .5s7.2 0 9-.5A3 3 0 0 0 23 17a31 31 0 0 0 .5-5A31 31 0 0 0 23 7ZM10 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>'
         };
         return icons[name];
       };
@@ -764,75 +679,6 @@
         }));
       };
 
-      const musicItems = [];
-      const renderMusic = () => {
-        const musicGrid = $("#musicGrid");
-        const musicSearch = $("#musicSearch");
-        const genreFilter = $("#genreFilter");
-        if (!musicGrid || !musicSearch || !genreFilter) return;
-        const query = musicSearch.value.trim().toLocaleLowerCase("es");
-        const genre = genreFilter.value.toLocaleLowerCase("es");
-        const items = musicItems.filter((item) => {
-          if (item.published === false) return false;
-          const searchable = [item.title, item.artist, item.country, item.genre, item.description].filter(Boolean).join(" ").toLocaleLowerCase("es");
-          return searchable.includes(query) && (!genre || String(item.genre || "").toLocaleLowerCase("es") === genre);
-        });
-        if (!items.length) {
-          musicGrid.innerHTML = musicItems.length
-            ? '<div class="empty-state"><strong>No encontramos coincidencias.</strong>Prueba con otro artista, canción, país o género.</div>'
-            : '<div class="empty-state"><strong>Estamos afinando la selección.</strong>Muy pronto encontrarás aquí artistas y canciones. El catálogo se actualizará desde el panel editorial.</div>';
-          return;
-        }
-        musicGrid.innerHTML = items.map((item, index) => {
-          const id = youtubeId(item.videoUrl);
-          const cover = mediaUrl(item.coverImage) || (id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : "");
-          const coverMarkup = cover ? `<img src="${escapeHTML(cover)}" alt="${escapeHTML(item.coverAlt || `Portada de ${item.title || "la canción"}`)}" loading="lazy">` : "";
-          return `<article class="music-card">
-            <div class="music-cover">${coverMarkup}<span class="cover-kicker">${escapeHTML(item.country || "Latinoamérica")}</span><span class="cover-number">${String(index + 1).padStart(2, "0")}</span>
-              ${id ? `<button class="player-launch" type="button" data-video-id="${id}" data-video-title="${escapeHTML(`${item.title || "Canción"} — ${item.artist || "Palo de Lluvia"}`)}" aria-label="Reproducir ${escapeHTML(item.title || "canción")} en la página"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></button>` : ""}
-            </div>
-            <div class="music-card-body"><div class="card-meta">${escapeHTML(item.genre || "Sonido emergente")}${item.year ? ` · ${escapeHTML(item.year)}` : ""}</div>
-              <h3>${escapeHTML(item.title || "Nueva canción")}</h3><p class="artist">${escapeHTML(item.artist || "Artista por anunciar")}</p>
-              ${item.description ? `<p class="description">${escapeHTML(item.description)}</p>` : ""}
-            </div>${id ? `<div class="player-slot" hidden></div>` : ""}
-          </article>`;
-        }).join("");
-        musicGrid.querySelectorAll(".player-launch").forEach((button) => button.addEventListener("click", () => {
-          const card = button.closest(".music-card");
-          const slot = $(".player-slot", card);
-          const player = document.createElement("div");
-          player.className = "player-shell";
-          const iframe = document.createElement("iframe");
-          iframe.src = `https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?autoplay=1&playsinline=1&rel=0`;
-          iframe.title = `Reproductor de YouTube: ${button.dataset.videoTitle}`;
-          iframe.allow = "autoplay; encrypted-media; picture-in-picture; web-share";
-          iframe.referrerPolicy = "strict-origin-when-cross-origin";
-          iframe.allowFullscreen = true;
-          player.append(iframe);
-          slot.replaceChildren(player);
-          slot.hidden = false;
-          button.hidden = true;
-        }));
-      };
-      $("#musicSearch")?.addEventListener("input", renderMusic);
-      $("#genreFilter")?.addEventListener("change", renderMusic);
-
-      const renderStories = (stories) => {
-        const published = stories.filter((story) => story.published !== false);
-        if (!published.length) return;
-        $("#storyGrid").innerHTML = published.map((story) => {
-          const image = mediaUrl(story.image);
-          const date = formatDate(story.date);
-          const external = safeHttpUrl(story.link);
-          return `<article class="story-card">
-            <div class="${image ? "story-image" : "story-placeholder"}">${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(story.imageAlt || story.title || "Imagen de la publicación")}" loading="lazy">` : escapeHTML(story.category || "Palo de Lluvia")}</div>
-            <div class="story-body"><div class="story-date">${escapeHTML(story.category || "En contexto")}${date ? ` · ${escapeHTML(date)}` : ""}</div>
-              <h3>${escapeHTML(story.title || "Nueva historia")}</h3>${story.summary ? `<p>${escapeHTML(story.summary)}</p>` : ""}
-              ${external ? `<a class="story-link" href="${escapeHTML(external)}" target="_blank" rel="noopener noreferrer">Leer / ver publicación ↗</a>` : ""}
-            </div></article>`;
-        }).join("");
-      };
-
       const instagramEmbedUrl = (value) => {
         const permalink = validInstagramUrl(value);
         if (!permalink) return "";
@@ -888,31 +734,6 @@
           console.error("Palo de Lluvia: no se pudo cargar content/gallery.json; se mostrarán los reels guardados en la página.", error);
           renderGallery(fallbackGallery);
           renderHomeReels(fallbackGallery);
-          const galleryError = $("#galleryError");
-          galleryError.textContent = "No se pudo cargar la galería actualizada; se muestran los reels guardados en la página.";
-          galleryError.hidden = false;
-        }
-      };
-
-      const renderTeam = (members) => {
-        const published = members.filter((member) => member.published !== false);
-        if (!published.length) return;
-        $("#teamGrid").innerHTML = published.map((member) => {
-          const image = mediaUrl(member.image);
-          const initials = (member.name || "PL").trim().split(/\s+/).slice(0, 2).map((part) => part[0]).join("").toUpperCase();
-          return `<article class="team-card"><div class="team-avatar">${image ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(member.name || "Integrante del equipo")}" loading="lazy">` : escapeHTML(initials)}</div>
-            <h3>${escapeHTML(member.name || "Nombre por anunciar")}</h3><p class="team-role">${escapeHTML(member.role || "Equipo Palo de Lluvia")}</p>${member.bio ? `<p>${escapeHTML(member.bio)}</p>` : ""}
-          </article>`;
-        }).join("");
-      };
-
-      const loadSection = async (path, expected, render, errorId) => {
-        try {
-          const data = await readJson(path);
-          if (!expected(data)) throw new TypeError(`El formato de ${path} no es válido.`);
-          render(data);
-        } catch (error) {
-          setError(errorId, error);
         }
       };
 
@@ -924,10 +745,7 @@
         setSiteStatus("No se pudieron cargar algunos ajustes. Revisa la configuración del proyecto.");
       });
 
-      loadSection("./content/music.json", Array.isArray, (items) => { musicItems.push(...items); renderMusic(); }, "musicError");
-      loadSection("./content/news.json", Array.isArray, renderStories, "storiesError");
       loadGallery();
-      loadSection("./content/team.json", Array.isArray, renderTeam, "teamError");
     })();
   </script>
 </body>
